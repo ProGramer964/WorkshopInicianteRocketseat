@@ -4,12 +4,12 @@ const server = express()
 
 const db = require("./db")
 
-server.use(express.static("ws"))
+server.use(express.static("/"))
 
 server.use(express.urlencoded({ extended: true}))
 
 const nunjucks = require("nunjucks")
-nunjucks.configure("ws", {
+nunjucks.configure("/", {
     express: server,
     noCache: true, // boolean
 })
@@ -32,7 +32,7 @@ server.get("/", function (req, res) {
         return res.render("index.html", { ideas: lastIdeas })
     })
 })
-server.get("/ideias", function (req, res) {
+server.get("ideias", function (req, res) {
     
 
 
@@ -68,7 +68,7 @@ server.post("/", function(req, res){
             console.log(err)
          return res.send("Erro no banco de dados!")
         }
-        return res.redirect("/ideias")
+        return res.redirect("ideias")
     })
 })
 
