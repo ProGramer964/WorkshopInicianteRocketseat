@@ -4,7 +4,7 @@ const server = express()
 
 const db = require("./db")
 
-server.use(express.static("public"))
+server.use(express.static("ws"))
 
 server.use(express.urlencoded({ extended: true}))
 
