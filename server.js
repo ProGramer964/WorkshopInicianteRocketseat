@@ -4,6 +4,8 @@ const server = express()
 
 const db = require("./db")
 
+<form action="netlify"></form>
+
 server.use(express.static("public"))
 
 server.use(express.urlencoded({ extended: true}))
