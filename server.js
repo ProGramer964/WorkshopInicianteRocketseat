@@ -13,11 +13,6 @@ nunjucks.configure("views", {
     express: server,
     noCache: true, // boolean
 })
-const nunjucks = require("nunjucks")
-nunjucks.configure("ws", {
-    express: server,
-    noCache: true, // boolean
-})
 server.get("/", function (req, res) {
 
     db.all(`SELECT * FROM ideas`, function(err, rows){
