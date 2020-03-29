@@ -2,33 +2,29 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-    <head>
-        <meta charset="UTF-8"
-        > 
-        {% block title %}
-            <title>Casa Criativa</title>
-        {% endblock title %}
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+    <title>Casa Criativa</title>
+    {% endblock title %}
 
-        {% include "head.html" %}
+    {% include "head.html" %}
 
-     </head>
+</head>
 
-    <body id="{{ bodyId }}">
-        
-        <div id="container"> <!-- É um tipo de caixa/ "Pai" das sections abaixo -->
+<body id="{{ bodyId }}">
+
+    <div id="container">
+        <!-- É um tipo de caixa/ "Pai" das sections abaixo -->
 
         {% block content %}
-         {% endblock %}
-            
-        </div>
-        
-        {% include "modal.html" %}
-     
-        <script src="/scripts.js"></script>
-    </body>
-    
-    </html>
+        {% endblock %}
 
+    </div>
 
+    {% include "modal.html" %}
 
+    <script src="/scripts.js"></script>
+</body>
 
+</html>
