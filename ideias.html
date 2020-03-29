@@ -22,7 +22,14 @@
 </section>
 <main>
     <section id="ideais">
-        {% include "all_ideas.html"%}
+        <img src="{{idea.image}}" alt="{{idea.title}}">
+        <div class="content">
+            <h3>{{idea.title}}</h3>
+            <p>{{idea.category}}</p>
+            <div class="description">{{idea.description}}</div>
+            <a href="{{idea.link}}" target="_blank">ir para ideia</a>
+    
+        </div>
     </section>
 
 </main>
