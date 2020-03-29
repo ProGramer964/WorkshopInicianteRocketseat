@@ -29,7 +29,7 @@ server.get("/", function (req, res) {
                 lastIdeas.push(idea)
             }
         }
-        return res.render("index2.html", { ideas: lastIdeas })
+        return res.render("index.html", { ideas: lastIdeas })
     })
 })
 server.get("/ideias", function (req, res) {
