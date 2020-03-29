@@ -9,7 +9,7 @@ server.use(express.static("public"))
 server.use(express.urlencoded({ extended: true}))
 
 const nunjucks = require("nunjucks")
-nunjucks.configure("views", {
+nunjucks.configure("ws", {
     express: server,
     noCache: true, // boolean
 })
